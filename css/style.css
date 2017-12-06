@@ -1,4 +1,4 @@
-@import url(../normalize.css/normalize.css);
+@import url(../node_modules/normalize.css/normalize.css);
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
 .main-header {
   height: 9.1%;
@@ -332,9 +332,8 @@
   font-size: 16px; }
 
 .main-footer_wrapper {
-  width: 68%;
-  margin-left: 17%;
-  margin-right: 16%;
+  width: 62.3%;
+  margin-left: 20.3%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
