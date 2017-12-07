@@ -33,11 +33,10 @@
   width: 100%;
   top: 0;
   min-height: 375px;
-  height: 900px;
+  height: 1000px;
   z-index: -1;
   background: url(../img/bg2.jpg) no-repeat;
   background-size: 100% 100%;
-  background-position: 100% 20px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -543,7 +542,7 @@ html, body {
     font-size: 12px;
     margin-top: 0; }
   .intro-section {
-    background-position: 45% -380px; }
+    background-position: 45% -200px; }
   .main-header__item {
     font-family: "aleo-bold", serif;
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
