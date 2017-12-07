@@ -1,11 +1,14 @@
 $(document).ready(function() {
-
+	let ease = 0.8;
 	let clicks = true;
 	let slides = $('.featured-dishes__all-dishes').children().length;
   let slideWidth = $('.featured-dishes__wrapper').outerWidth();
   let roundedSlideWidth = slideWidth.toFixed(2);
   let min = 0;
   let max = -((slides-1) * slideWidth);
+
+	
+
   Number.prototype.roundTo = function(nTo) {
     nTo = nTo || 2;
     return Math.round(this * (1 / nTo) ) * nTo;
