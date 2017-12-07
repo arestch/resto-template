@@ -7,7 +7,15 @@ $(document).ready(function() {
   let min = 0;
   let max = -((slides-1) * slideWidth);
 
-	
+	$(window).bind('scroll',function(e){
+    parallaxScroll();
+		});
+
+	function parallaxScroll(){
+    let scrolled = $(window).scrollTop();
+    let height = $('.intro-section').height();
+    $('.intro-section').css('top',(-0-(scrolled*.25))+'px');
+}
 
   Number.prototype.roundTo = function(nTo) {
     nTo = nTo || 2;
