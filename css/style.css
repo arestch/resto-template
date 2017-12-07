@@ -63,7 +63,8 @@
   display: block;
   text-align: center;
   color: #fff;
-  font-family: "Aleo", sans-serif; }
+  font-family: "Aleo", sans-serif;
+  margin-top: 30px; }
 
 .info-menu__logo-container {
   position: relative;
@@ -538,7 +539,10 @@ html, body {
     margin-left: 40px;
     margin-bottom: 0; }
   .intro-section__text {
-    font-size: 15px; }
+    font-size: 12px;
+    margin-top: 0; }
+  .intro-section {
+    background-position: 45% -380px; }
   .main-header__item {
     font-family: "aleo-bold", serif;
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
@@ -564,7 +568,7 @@ html, body {
     bottom: 40px;
     left: 70%; }
   .intro-section__title {
-    font-size: 2em; }
+    font-size: 32px; }
   .info-menu__dish-name::after {
     display: none; }
   .featured-dishes {
