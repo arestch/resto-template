@@ -8,20 +8,13 @@ $(document).ready(function() {
       max = -((slides-1) * slideWidth),
       activeSwitchItem = "featured-dishes__switch-item--active";
 
+//parallax effect
   $(window).bind("scroll",function(e){
     parallaxScroll();
     });
 
-  function parallaxScroll(){
-    let scrolled = $(window).scrollTop();
-    let height = $(".intro-section").height();
-    $(".intro-section").css("top", (-0 - (scrolled * 0.25)) + "px");
-}
 
-  Number.prototype.roundTo = function(nTo) {
-    nTo = nTo || 2;
-    return Math.round(this * (1 / nTo) ) * nTo;
-}
+//change hamburger button state on click and showing menu
 
   $(".hamburger").on("click", function() {
     if($(this).hasClass("is-active")) {
@@ -32,6 +25,8 @@ $(document).ready(function() {
     $(this).addClass("is-active");
     $(".main-header__list").show(250);
   });
+
+// show/hide additional items on button click
 
   $(".info-menu__button").on("click", function() {
     if (clicks) {
@@ -44,6 +39,8 @@ $(document).ready(function() {
     clicks = !clicks;
   });
 
+//change slider position and active-item on switcher click
+
   $(".featured-dishes__switch-item").on("click", function() {
     let listItem = $(this).index();
     $("." + activeSwitchItem).removeClass(activeSwitchItem);
@@ -53,6 +50,8 @@ $(document).ready(function() {
                                     .animate({
                                       left: "-" + 150*listItem + "%"});
   });
+
+//making images slide with mouse
 
   $(".featured-dishes__all-dishes").draggable({
     "scroll":false,
@@ -90,3 +89,13 @@ $(document).ready(function() {
     $(".featured-dishes__switch-item:nth-child("+ number + ")").addClass(activeSwitchItem);
   }
 });
+
+  function parallaxScroll(){
+    let scrolled = $(window).scrollTop();
+    let height = $(".intro-section").height();
+    $(".intro-section").css("top", (-0 - (scrolled * 0.25)) + "px");
+}
+
+Number.prototype.roundTo = function(nTo) {
+    return Math.round(this * (1 / nTo) ) * nTo;
+}
