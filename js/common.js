@@ -1,11 +1,12 @@
 $(document).ready(function() {
-	let ease = 0.8;
-	let clicks = true;
-	let slides = $('.featured-dishes__all-dishes').children().length;
-  let slideWidth = $('.featured-dishes__wrapper').outerWidth();
-  let roundedSlideWidth = slideWidth.toFixed(2);
-  let min = 0;
-  let max = -((slides-1) * slideWidth);
+	 let ease = 0.8,
+    	 clicks = true,
+    	 slides = $('.featured-dishes__all-dishes').children().length,
+       slideWidth = $('.featured-dishes__wrapper').outerWidth(),
+       roundedSlideWidth = slideWidth.toFixed(2),
+       min = 0,
+       max = -((slides-1) * slideWidth),
+       activeSwitchItem = "featured-dishes__switch-item--active";
 
 	$(window).bind('scroll',function(e){
     parallaxScroll();
@@ -46,8 +47,8 @@ $(document).ready(function() {
 
   $(".featured-dishes__switch-item").on("click", function() {
   	let listItem = $(this).index();
-  	$(".featured-dishes__switch-item--active").removeClass("featured-dishes__switch-item--active");
-  	$(this).addClass("featured-dishes__switch-item--active");
+  	$("." + activeSwitchItem).removeClass(activeSwitchItem);
+  	$(this).addClass(activeSwitchItem);
   	console.log(listItem);
   	$(".featured-dishes__all-dishes").stop()
   																	 .animate({
@@ -64,8 +65,8 @@ $(document).ready(function() {
         stop: function( event, ui ) {
             $(this).animate({'left': (ui.position.left).roundTo(slideWidth)});
             setTimeout(function() {
-            	let leftPos =  parseInt($('.featured-dishes__all-dishes').css("left"));
-            	if (leftPos == 0) {
+            	let leftPos =  parseInt($('.featured-dishes__all-dishes').css("left"), 10);
+            	if (leftPos === 0) {
             			changeSwitcher(1);
             	}
             	if(leftPos < 0) {
@@ -83,8 +84,8 @@ $(document).ready(function() {
   
 });
 
- function changeSwitcher(number) {
-   	  $(".featured-dishes__switch-item--active").removeClass("featured-dishes__switch-item--active");
-      $(".featured-dishes__switch-item:nth-child("+ number + ")").addClass("featured-dishes__switch-item--active");
+ function changeSwitcher(number = 1) {
+   	  $("." + activeSwitchItem).removeClass(activeSwitchItem);
+      $(".featured-dishes__switch-item:nth-child("+ number + ")").addClass(activeSwitchItem);
    }
 });
