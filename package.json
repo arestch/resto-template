@@ -6,11 +6,17 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "0.1.x",
     "autoprefixer": "6.7.x",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "2.18.8",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.2.0",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^2.0.0"
   },
   "scripts": {
     "test": "editorconfig-cli",
@@ -30,8 +36,10 @@
   },
   "dependencies": {
     "gulp-clean-css": "^3.9.0",
+    "gulp-jquery": "^1.1.2",
     "gulp-minify": "^2.1.0",
     "gulp-rename": "^1.2.2",
+    "jquery": "^3.2.1",
     "normalize": "^0.3.1",
     "normalize.css": "^7.0.0",
     "save-dev": "^2.0.0"
