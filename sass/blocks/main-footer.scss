@@ -1,0 +1,77 @@
+.main-footer {
+	background-color: #3b3b3b;
+	width: 100%;
+	min-height: 250px;
+	height: 100%;
+	color: #fff;
+	font-family: "Aleo", serif;
+	line-height: 35px;
+	letter-spacing: 0.8px;
+	font-weight: 400;
+	margin-top: 10%;
+	font-size: 16px;
+}
+
+.main-footer_wrapper {
+	width: 62.3%;
+	margin-left: 20.3%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-footer__address {
+	color: #ebebeb;
+	width: 200px;
+	margin-top: 50px;
+	&--france {
+		color: #ececec;
+	}
+	&-text {
+	margin-bottom: 0;
+	}
+}
+
+.main-footer__info {
+	font-family: "aleo-light", serif;
+	font-weight: 100;
+	margin: 0;
+}
+
+.main-footer__list {
+	width: 133px;
+	margin-top: 65px;
+	list-style: none;
+	&-link {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+
+.main-footer__list-link {
+	&:hover {
+		color: #ccc;
+	}
+}
+
+.main-footer__text {
+	font-size: 14px;
+	margin: 0;
+}
+
+.main-footer__logo {
+	margin-top: 15px;
+	margin-bottom: 40px;
+}
+
+.main-footer__copyright {
+	width:  250px;
+	margin-top: 50px;
+	line-height: 30px;
+	font-family: "aleo-light", serif;
+}
+.main-footer__link {
+	text-decoration: none;
+	color: #ececec;
+	line-height: 30px;
+	font-family: "aleo-bold", serif;
+}

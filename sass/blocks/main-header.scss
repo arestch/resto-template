@@ -1,0 +1,33 @@
+
+.main-header{
+	height: 9.1%;
+	font-family: "Aleo", sans-serif;
+	display: flex;
+	background-color: #fff;
+}
+
+.main-header__logo {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-left: 15%;
+}
+
+.main-header__list {
+	list-style: none;
+	display: flex;
+	width: 35%;
+	margin-top: 49px;
+	margin-left: 30%;
+	justify-content: space-around;
+	
+}
+
+.main-header__item {
+cursor: pointer;
+font-size: 14px;
+color: #3b3b3b;
+letter-spacing: 0.98px;
+ &:hover {
+ 	color: #000;
+ }
+}

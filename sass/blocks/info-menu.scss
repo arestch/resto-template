@@ -1,0 +1,119 @@
+.info-menu__logo-container {
+	position: relative;
+	left: 50%;
+	top: -2px;
+	margin-left: -77.5px;
+	height: 75px;
+	width: 155px;
+	background: url(/img/menu.svg) no-repeat;
+
+	}
+
+.info-menu {
+	margin-top: 42%;
+	background-color: #fff;
+}
+
+.info-menu__logo-text {
+	position: absolute;
+	left: 20%;
+	top: 50%;
+	margin-top: -15px;
+	font-family: "Aleo", sans-serif;
+	font-size: 20px;
+	color: #fff;
+
+}
+.info-menu__prices {
+	margin-top: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.info-menu__dish {
+	font-family: "Aleo", sans-serif;
+	width: 45%;
+	position: relative;
+	padding-bottom: 20px;
+
+	&:nth-child(n+9) {
+		display: none;
+	}
+
+}
+
+.info-menu__dish-name {
+	line-height: 0;
+	letter-spacing: 0.8px;
+	position: relative;
+	color: #555;
+	&::after {
+
+		position: absolute;
+		content: "";
+		left: 58%;
+		width: 30%;
+		margin-top: 2px;
+		border-top: 1px solid rgba(5,5,5, 0.2);
+	}
+	&:hover {
+		color: rgba(0,0,0, 1);
+	}
+}
+.info-menu__price {
+	position: absolute;
+	top: 9px;
+	font-weight: 400;
+	color: #555;
+	right: 0;
+	transition: color 0.25s ease;
+	
+	
+}
+
+.info-menu__dish-describe {
+	letter-spacing: 0.6px;	
+	font-size: 12px;
+	font-weight: 400;
+	color: #b7b7b7;
+		transition: color 0.25s ease;
+
+	&:hover {
+		color: rgba(0,0,0, 0.7);
+	}
+}
+
+.info-menu__button {
+	position: relative;
+	margin-top: 3%;
+	font-family: "Aleo", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	letter-spacing: 0.98px;
+	color: #b7b7b7;
+	width: 130px;
+	left: 50%;
+	margin-left: -65px;
+	height: 34px;
+	background-color: #fff;
+	border: 1px solid #d7d5d5;
+	transition: color 0.25s ease;
+	padding: 0;
+	cursor: pointer;
+	 &:hover {
+
+	 	color: rgba(0,0,0, 0.7);
+	 }
+	 &-text {
+	 	margin-left: -15px;
+	 }
+	 & .fa {
+		position: absolute;
+		width: 11px;
+		top: 9px;
+		right: 10%;
+		height: 7px;
+	}
+	}
+	
