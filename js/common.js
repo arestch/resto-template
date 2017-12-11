@@ -3,10 +3,11 @@ $(document).ready(function() {
       clicks = true,
       slides = $(".featured-dishes__all-dishes").children().length,
       slideWidth = $(".featured-dishes__wrapper").outerWidth(),
-      roundedSlideWidth = slideWidth.toFixed(2),
+      max = -((slides - 1) * slideWidth),
       min = 0,
-      max = -((slides-1) * slideWidth),
       activeSwitchItem = "featured-dishes__switch-item--active";
+
+
 
 //parallax effect
   $(window).bind("scroll",function(e){
@@ -50,6 +51,19 @@ $(document).ready(function() {
                                     .animate({
                                       left: "-" + 150*listItem + "%"});
   });
+
+  
+//move sliders on resize
+  $(window).on("resize", () => {
+    let listItem =  $(".featured-dishes__switch-item--active").index();
+    slides = $(".featured-dishes__all-dishes").children().length;
+    slideWidth = $(".featured-dishes__wrapper").outerWidth();
+    max = -((slides - 1) * slideWidth);
+    $(".featured-dishes__all-dishes").stop()
+                                    .animate({
+                                      left: "-" + 150*listItem + "%"});
+  });
+
 
 //making images slide with mouse
 
