@@ -14,7 +14,7 @@ var gulp = require("gulp"),
     pump = require('pump'),
     concat = require('gulp-concat');
 
-gulp.task("style", function() {
+gulp.task("style", () => {
   gulp.src("sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
@@ -30,7 +30,7 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
    
-gulp.task('compress', function() {
+gulp.task('compress', () => {
   return gulp.src([
     'scripts/common.js',
     ])
@@ -49,7 +49,7 @@ gulp.task('js', ['compress'], () =>
 );
 
 
-gulp.task('browser-sync', function () {
+gulp.task('browser-sync', () => {
         browserSync({
                 server: {
                         baseDir: "www"
@@ -61,7 +61,7 @@ gulp.task('browser-sync', function () {
 });
 
 
-gulp.task('serve', ['style', 'compress'], function() {
+gulp.task('serve', ['style', 'compress'], () => {
   server.init({
     server: ".",
     notify: false,
