@@ -46,7 +46,6 @@ $(document).ready(function() {
     let listItem = $(this).index();
     $("." + activeSwitchItem).removeClass(activeSwitchItem);
     $(this).addClass(activeSwitchItem);
-    console.log(listItem);
     $(".featured-dishes__all-dishes").stop()
                                     .animate({
                                       left: "-" + 150*listItem + "%"});
