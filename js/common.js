@@ -109,6 +109,6 @@ $(document).ready(function() {
     $(".intro-section").css("top", (-0 - (scrolled * 0.25)) + "px");
 }
 
-Number.prototype.roundTo = function(nTo) {
+Number.prototype.roundTo = function(nTo = 10) {
     return Math.round(this * (1 / nTo) ) * nTo;
 }
