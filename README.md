@@ -1,1 +1,1 @@
-# arestch.github.io
+# https://arestch.github.io/resto-template/
